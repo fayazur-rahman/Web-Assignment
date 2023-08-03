@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Three-Frame Layout</title>
+</head>
+<style>
+    body, html {
+    height: 100%;
+    margin: 0;
+    }
+
+    .container {
+    display: flex;
+    height: 100%;
+    }
+
+    .left-frame {
+    flex: 20%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    }
+
+    .center-frame {
+    flex: 60%;
+    background-color: #ffffff;
+    padding: 20px;
+    overflow-y: auto;
+    position: relative; 
+    }
+
+    .right-frame {
+    flex: 20%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    }
+
+    /* Add some styles for the anchor links */
+    a {
+    text-decoration: none;
+    color: #007bff;
+    display: block;
+    margin-bottom: 10px;
+    }
+
+    a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+    }
+
+    /* Add some styles for the sections */
+    div[id] {
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    }
+    form {
+    display: flex;
+    flex-direction: column;
+    }
+
+    label {
+    margin-bottom: 5px;
+    }
+
+    input, textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    }
+
+    button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    }
+
+    button:hover {
+    background-color: #0056b3;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="left-frame">
+          <h2>Contents of Pages</h2>
+          <ul>
+            <li><a class="menubtn" href="#home">Home</a></li>
+            <li><a class="menubtn" href="#audio">Audio Embeding</a></li>
+            <li><a class="menubtn" href="#video">Video Embeding</a></li>
+          </ul>
+        </div>
+        <div class="center-frame">
+          <!-- Body of the page goes here -->
+          <h1>Main Content</h1>
+          <p>Main content has a width of 60% and it's aligned in center.</p>
+    
+          <div id="home">
+            <h2>Home</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <h2>Where does it come from?</h2>
+            <p>
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                
+                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+            </p>
+            <h2>Why do we use it?</h2>
+            <p>
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+            </p>
+          </div>
+    
+          <div id="audio">
+            <h2>Audio Embeding</h2>
+            <p align="center" >
+                Let's embed an Audio file. <br> <br>
+                <audio controls> 
+                    <source src="audio.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </p>
+          </div>
+    
+          <div id="video">
+            <h2>Video Embeding</h2>
+            <p align="center">
+                Let's embed a Video File. <br> <br>
+                <video width="640" height="360" controls>
+                    <source src="video.mp4" type="video/mp4">
+                    Your browser does not support the video element.
+                  </video>
+            </p>
+          </div>
+          <div id="about">
+            <h2>About Us</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. 
+                Suspendisse eu est ultrices, elementum eros non, dapibus elit. Sed posuere, 
+                elit nec scelerisque malesuada, nisi turpis dictum purus, vel scelerisque 
+                neque mauris nec sapien. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+            </p>
+            <p>
+                Nunc et justo sit amet odio mollis tincidunt. Integer eu lorem in purus 
+                dictum tincidunt in vel odio. Phasellus id tristique ipsum. Curabitur et 
+                justo vel sapien facilisis posuere. In hac habitasse platea dictumst.
+            </p>
+          </div>
+          <div id="contact">
+            <h2>Contact Us</h2>
+            <p>
+                <form action="submit_form.php" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+              
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+              
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+              
+                    <button type="submit">Submit</button>
+                  </form>
+            </p>
+          </div>
+        </div>
+        <div class="right-frame">
+          <h2>Remarks</h2>
+          <ul>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+  <script>
+    function scrollToSection(elementId) {
+    const element = document.getElementById(elementId);
+    if (element) {
+        const offset = element.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({
+        top: offset,
+        behavior: 'smooth'
+        });
+    }
+    }
+
+    const homeLink = document.querySelector('a[href="#home"]');
+    const audioLink = document.querySelector('a[href="#audio"]');
+    const videoLink = document.querySelector('a[href="#video"]');
+    const aboutLink = document.querySelector('a[href="#about"]');
+    const contactLink = document.querySelector('a[href="#contact"]');
+
+    homeLink.addEventListener('click', () => scrollToSection('home'));
+    audioLink.addEventListener('click', () => scrollToSection('audio'));
+    videoLink.addEventListener('click', () => scrollToSection('video'));
+    aboutLink.addEventListener('click', () => scrollToSection('about'));
+    contactLink.addEventListener('click', () => scrollToSection('contact'));
+  </script>
+</body>
+</html>

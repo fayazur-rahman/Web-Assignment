@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Country Selection</title>
+</head>
+<style>
+    body {
+    font-family: sans-serif;
+    }
+
+    h1 {
+    text-align: center;
+    }
+
+    select {
+    width: 30%;
+    }
+
+    p {
+    margin-top: 10px;
+    }
+
+    .select{
+        text-align: center;
+    }
+
+    #capital {
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+    }
+
+</style>
+<body>
+    <h1>Country Selection</h1>
+    <div class="select">
+        <select id="country">
+            <option value="Dhaka">Bangladesh</option>
+            <option value="London">United Kingdom</option>
+            <option value="Paris">France</option>
+            <option value="Berlin">Germany</option>
+            <option value="Tokyo">Japan</option>
+        </select>
+    </div>
+    
+    <p align="center" id="capital"></p>
+    <script>
+        document.getElementById("country").addEventListener("change", function () {
+            var capital = document.getElementById("country").options[document.getElementById("country").selectedIndex].value;
+            document.getElementById("capital").innerHTML = capital;
+        });
+    </script>
+</body>
+
+</html>
